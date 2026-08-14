@@ -58,7 +58,7 @@ void main() {
         explanation: ScenarioExplanation.fromReport(report),
       );
       final json = withExpl.toJson();
-      expect(json['explanation'], isA<Map>());
+      expect(json['explanation'], isA<Map<String, dynamic>>());
       final restored = FrameGuardReport.fromJson(json);
       expect(restored.explanation, isNotNull);
       expect(

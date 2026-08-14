@@ -32,7 +32,7 @@ class FrameStats {
   });
 
   /// Empty stats (no frames).
-  factory FrameStats.empty() => FrameStats(
+  factory FrameStats.empty() => const FrameStats(
         totalFrames: 0,
         jankyFrames: 0,
         jankRate: 0,
@@ -50,8 +50,8 @@ class FrameStats {
         mixedFrames: 0,
         insufficientEvidenceFrames: 0,
         longestJankStreak: 0,
-        jankDistribution: const JankDistribution(),
-        histogram: const FrameHistogram(buckets: [], counts: []),
+        jankDistribution: JankDistribution(),
+        histogram: FrameHistogram(buckets: [], counts: []),
         stdDev: Duration.zero,
       );
 

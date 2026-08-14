@@ -126,7 +126,8 @@ class TextReportFormatter {
     }
     buf.writeln();
     buf.writeln(
-        'B = build-bound  R = raster-bound  M = mixed  ? = insufficient');
+      'B = build-bound  R = raster-bound  M = mixed  ? = insufficient',
+    );
     return buf.toString().trimRight();
   }
 

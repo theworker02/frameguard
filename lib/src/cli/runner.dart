@@ -144,17 +144,18 @@ ArgParser _buildParser() {
 
   parser.addCommand('help');
   parser.addCommand('version');
-  parser.addCommand('doctor')
-    ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
-  parser.addCommand('init')
-    ..addFlag(
-      'yaml',
-      defaultsTo: true,
-      help: 'Write frameguard.yaml when missing.',
-    );
+  parser
+      .addCommand('doctor')
+      .addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
+  parser.addCommand('init').addFlag(
+        'yaml',
+        defaultsTo: true,
+        help: 'Write frameguard.yaml when missing.',
+      );
 
-  parser.addCommand('inspect')
-    ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
+  parser
+      .addCommand('inspect')
+      .addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
   parser.addCommand('report')
     ..addOption(
       'format',
@@ -227,12 +228,11 @@ ArgParser _buildParser() {
     ..addOption('out', help: 'Write snippet to this path.');
 
   final history = parser.addCommand('history');
-  history.addCommand('append')
-    ..addOption(
-      'dir',
-      defaultsTo: 'history',
-      help: 'History directory.',
-    );
+  history.addCommand('append').addOption(
+        'dir',
+        defaultsTo: 'history',
+        help: 'History directory.',
+      );
   history.addCommand('show')
     ..addOption(
       'dir',
@@ -271,8 +271,9 @@ ArgParser _buildParser() {
   baseline.addCommand('list')
     ..addOption('dir', defaultsTo: 'baselines', help: 'Baselines directory.')
     ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
-  baseline.addCommand('show')
-    ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
+  baseline
+      .addCommand('show')
+      .addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
 
   parser.addCommand('merge')
     ..addOption('out', help: 'Write aggregate summary JSON.')
@@ -298,8 +299,9 @@ ArgParser _buildParser() {
 
   final config = parser.addCommand('config');
   config.addCommand('validate');
-  config.addCommand('show')
-    ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
+  config
+      .addCommand('show')
+      .addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
 
   parser.addCommand('migrate')
     ..addOption('dir', defaultsTo: 'reports', help: 'Reports directory.')
@@ -326,8 +328,11 @@ ArgParser _buildParser() {
   addListFlags(parser.addCommand('ls'));
 
   parser.addCommand('explain')
-    ..addOption('format',
-        allowed: ['text', 'json', 'markdown'], defaultsTo: 'text')
+    ..addOption(
+      'format',
+      allowed: ['text', 'json', 'markdown'],
+      defaultsTo: 'text',
+    )
     ..addOption('out');
   parser.addCommand('frames')
     ..addOption('limit', defaultsTo: '15', help: 'Max frames to show.')
@@ -356,12 +361,16 @@ ArgParser _buildParser() {
     ..addFlag('recursive', abbr: 'r', negatable: false)
     ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
   parser.addCommand('drift')
-    ..addOption('threshold',
-        defaultsTo: '0.20', help: 'Gradual regression threshold.')
+    ..addOption(
+      'threshold',
+      defaultsTo: '0.20',
+      help: 'Gradual regression threshold.',
+    )
     ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text')
     ..addOption('out');
-  parser.addCommand('profiles')
-    ..addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
+  parser
+      .addCommand('profiles')
+      .addOption('format', allowed: ['text', 'json'], defaultsTo: 'text');
   parser.addCommand('artifacts')
     ..addOption('dir', defaultsTo: 'reports', help: 'Output directory.')
     ..addFlag('html', defaultsTo: true)
@@ -376,8 +385,11 @@ ArgParser _buildParser() {
     ..addOption('out-dir', defaultsTo: 'reports/exports')
     ..addOption('baseline')
     ..addFlag('recursive', abbr: 'r', negatable: false)
-    ..addFlag('check',
-        negatable: false, help: 'Also run budget/baseline check.');
+    ..addFlag(
+      'check',
+      negatable: false,
+      help: 'Also run budget/baseline check.',
+    );
   parser.addCommand('watch')
     ..addOption('dir', defaultsTo: 'reports')
     ..addOption('baseline')
@@ -388,12 +400,11 @@ ArgParser _buildParser() {
       negatable: false,
       help: 'Process existing files once and exit.',
     );
-  parser.addCommand('completions')
-    ..addOption(
-      'shell',
-      allowed: ['bash', 'zsh', 'powershell'],
-      defaultsTo: 'bash',
-    );
+  parser.addCommand('completions').addOption(
+        'shell',
+        allowed: ['bash', 'zsh', 'powershell'],
+        defaultsTo: 'bash',
+      );
 
   return parser;
 }
@@ -1415,7 +1426,8 @@ Future<int> _frames(ArgResults command, {required bool quiet}) async {
     );
   } else if (format == 'csv') {
     final buf = StringBuffer(
-        'frame,total_ms,build_ms,raster_ms,severity,bottleneck,janky\n');
+      'frame,total_ms,build_ms,raster_ms,severity,bottleneck,janky\n',
+    );
     for (final f in frames) {
       buf.writeln(
         '${f.frameNumber},${CliIo.ms(f.totalDuration)},${CliIo.ms(f.buildDuration)},'
@@ -1770,7 +1782,7 @@ int _profiles(ArgResults command, {required bool quiet}) {
     );
   } else if (!quiet) {
     for (final p in profiles) {
-      stdout.writeln('${p.name}');
+      stdout.writeln(p.name);
       if (p.description != null) stdout.writeln('  ${p.description}');
       stdout.writeln('  budget: ${p.budget.toJson()}');
       stdout.writeln();

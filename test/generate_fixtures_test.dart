@@ -7,67 +7,73 @@ import 'package:path/path.dart' as p;
 /// Writes committed CLI fixtures. Run with:
 /// `flutter test test/generate_fixtures_test.dart`
 void main() {
-  test('generate fixtures', () async {
-    FrameGuard.initialize(
-      config: FrameGuardConfig(
-        refreshRate: const RefreshRate.hz(60),
-        defaultBudget: FrameBudget.forRefreshRate(60, maxJankRate: 0.02),
-      ),
-      force: true,
-    );
-    addTearDown(FrameGuard.reset);
+  test(
+    'generate fixtures',
+    () async {
+      FrameGuard.initialize(
+        config: FrameGuardConfig(
+          refreshRate: const RefreshRate.hz(60),
+          defaultBudget: FrameBudget.forRefreshRate(60, maxJankRate: 0.02),
+        ),
+        force: true,
+      );
+      addTearDown(FrameGuard.reset);
 
-    final outDir = Directory('test/fixtures');
-    await outDir.create(recursive: true);
-    await Directory(p.join(outDir.path, 'baselines')).create(recursive: true);
+      final outDir = Directory('test/fixtures');
+      await outDir.create(recursive: true);
+      await Directory(p.join(outDir.path, 'baselines')).create(recursive: true);
 
-    final healthy = _buildReport(
-      scenario: 'healthy_scroll',
-      id: 'sess-fixture-healthy',
-      jankEvery: 50,
-      budget: FrameBudget.forRefreshRate(
-        60,
-        maxJankRate: 0.05,
-        maxJankFrames: 10,
-        p99Multiplier: 2.5,
-      ),
-    );
-    final regressing = _buildReport(
-      scenario: 'catalog_scroll',
-      id: 'sess-fixture-regress',
-      jankEvery: 5,
-      buildHeavy: true,
-      budget: FrameBudget.forRefreshRate(
-        60,
-        maxJankRate: 0.02,
-        maxJankFrames: 3,
-      ),
-    );
-    final worse = _buildReport(
-      scenario: 'healthy_scroll',
-      id: 'sess-fixture-worse',
-      jankEvery: 8,
-      buildHeavy: true,
-      budget: FrameBudget.forRefreshRate(
-        60,
-        maxJankRate: 0.05,
-        maxJankFrames: 10,
-        p99Multiplier: 2.5,
-      ),
-    );
+      final healthy = _buildReport(
+        scenario: 'healthy_scroll',
+        id: 'sess-fixture-healthy',
+        jankEvery: 50,
+        budget: FrameBudget.forRefreshRate(
+          60,
+          maxJankRate: 0.05,
+          maxJankFrames: 10,
+          p99Multiplier: 2.5,
+        ),
+      );
+      final regressing = _buildReport(
+        scenario: 'catalog_scroll',
+        id: 'sess-fixture-regress',
+        jankEvery: 5,
+        buildHeavy: true,
+        budget: FrameBudget.forRefreshRate(
+          60,
+          maxJankRate: 0.02,
+          maxJankFrames: 3,
+        ),
+      );
+      final worse = _buildReport(
+        scenario: 'healthy_scroll',
+        id: 'sess-fixture-worse',
+        jankEvery: 8,
+        buildHeavy: true,
+        budget: FrameBudget.forRefreshRate(
+          60,
+          maxJankRate: 0.05,
+          maxJankFrames: 10,
+          p99Multiplier: 2.5,
+        ),
+      );
 
-    await healthy.writeJson(File(p.join(outDir.path, 'healthy_scroll.json')));
-    await regressing
-        .writeJson(File(p.join(outDir.path, 'catalog_scroll.json')));
-    await worse
-        .writeJson(File(p.join(outDir.path, 'healthy_scroll_worse.json')));
-    await FrameGuardBaseline.fromReport(healthy).write(
-      File(p.join(outDir.path, 'baselines', 'healthy_scroll.json')),
-    );
+      await healthy.writeJson(File(p.join(outDir.path, 'healthy_scroll.json')));
+      await regressing
+          .writeJson(File(p.join(outDir.path, 'catalog_scroll.json')));
+      await worse
+          .writeJson(File(p.join(outDir.path, 'healthy_scroll_worse.json')));
+      await FrameGuardBaseline.fromReport(healthy).write(
+        File(p.join(outDir.path, 'baselines', 'healthy_scroll.json')),
+      );
 
-    expect(
-        File(p.join(outDir.path, 'healthy_scroll.json')).existsSync(), isTrue);
-  }, timeout: const Timeout(Duration(minutes: 1)));
+      expect(
+        File(p.join(outDir.path, 'healthy_scroll.json')).existsSync(),
+        isTrue,
+      );
+    },
+    timeout: const Timeout(Duration(minutes: 1)),
+  );
 }
 
 FrameGuardReport _buildReport({

@@ -28,14 +28,22 @@ void main() {
     const budget = Duration(milliseconds: 8);
 
     test('classifies severities', () {
-      expect(policy.classify(const Duration(milliseconds: 7), budget),
-          JankSeverity.healthy);
-      expect(policy.classify(const Duration(milliseconds: 12), budget),
-          JankSeverity.minor);
-      expect(policy.classify(const Duration(milliseconds: 20), budget),
-          JankSeverity.major);
-      expect(policy.classify(const Duration(milliseconds: 40), budget),
-          JankSeverity.severe);
+      expect(
+        policy.classify(const Duration(milliseconds: 7), budget),
+        JankSeverity.healthy,
+      );
+      expect(
+        policy.classify(const Duration(milliseconds: 12), budget),
+        JankSeverity.minor,
+      );
+      expect(
+        policy.classify(const Duration(milliseconds: 20), budget),
+        JankSeverity.major,
+      );
+      expect(
+        policy.classify(const Duration(milliseconds: 40), budget),
+        JankSeverity.severe,
+      );
     });
   });
 
@@ -151,15 +159,15 @@ void main() {
   group('Baseline comparison', () {
     test('detects p95 regression', () {
       FrameGuard.initialize();
-      final baseline = FrameGuardBaseline(
+      final baseline = const FrameGuardBaseline(
         schemaVersion: 1,
         scenario: 'catalog_scroll',
-        device: const DeviceMetadata(
+        device: DeviceMetadata(
           platform: 'android',
           buildMode: FrameGuardBuildMode.profile,
           refreshRateHz: 120,
         ),
-        metrics: const BaselineMetrics(
+        metrics: BaselineMetrics(
           p50FrameMs: 6,
           p95FrameMs: 12.8,
           p99FrameMs: 18.1,

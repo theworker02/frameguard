@@ -115,11 +115,13 @@ class JsonReportEncoder {
           .toList(),
       imageCache: json['imageCache'] is Map
           ? _cacheFromJson(
-              Map<String, Object?>.from(json['imageCache']! as Map))
+              Map<String, Object?>.from(json['imageCache']! as Map),
+            )
           : null,
       budget: json['budget'] is Map
           ? FrameBudget.fromJson(
-              Map<String, Object?>.from(json['budget']! as Map))
+              Map<String, Object?>.from(json['budget']! as Map),
+            )
           : null,
       budgetEvaluation: json['budgetEvaluation'] is Map
           ? _evalFromJson(

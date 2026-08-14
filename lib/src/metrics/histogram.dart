@@ -35,7 +35,8 @@ class FrameHistogram {
     final counts = List<int>.filled(bucketEdgesMs.length, 0);
     for (final (lo, hi) in bucketEdgesMs) {
       labels.add(
-          hi == null ? '${lo.toInt()}+ ms' : '${lo.toInt()}–${hi.toInt()} ms');
+        hi == null ? '${lo.toInt()}+ ms' : '${lo.toInt()}–${hi.toInt()} ms',
+      );
     }
     for (final d in durations) {
       final ms = d.inMicroseconds / 1000.0;
@@ -60,7 +61,8 @@ class FrameHistogram {
           maxCount == 0 ? 0 : ((counts[i] / maxCount) * width).round();
       final bar = '#' * barLen;
       buf.writeln(
-          '${buckets[i].padRight(12)} ${counts[i].toString().padLeft(5)} $bar');
+        '${buckets[i].padRight(12)} ${counts[i].toString().padLeft(5)} $bar',
+      );
     }
     return buf.toString().trimRight();
   }

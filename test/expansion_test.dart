@@ -219,10 +219,10 @@ FrameGuardReport _report({required double p95Ms, bool janky = false}) {
     regions: const [],
     customMetrics: const {},
     imageWarnings: const [],
-    budget: FrameBudget(maxP95FrameTime: budget),
+    budget: const FrameBudget(maxP95FrameTime: budget),
     budgetEvaluation: BudgetEvaluation.evaluate(
       stats,
-      FrameBudget(maxP95FrameTime: budget),
+      const FrameBudget(maxP95FrameTime: budget),
     ),
   );
 }
