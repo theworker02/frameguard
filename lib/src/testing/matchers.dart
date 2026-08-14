@@ -24,8 +24,7 @@ Matcher hasJankRateBelow(double maxRate) => _HasJankRateBelow(maxRate);
 /// Namespace for discoverability (`FrameGuardMatchers.meetsBudget(...)`).
 abstract final class FrameGuardMatchers {
   /// See top-level [meetsFrameBudget].
-  static Matcher meetsFrameBudget(FrameBudget budget) =>
-      _MeetsBudget(budget);
+  static Matcher meetsFrameBudget(FrameBudget budget) => _MeetsBudget(budget);
 
   /// Alias for [meetsFrameBudget].
   static Matcher meetsBudget(FrameBudget budget) => _MeetsBudget(budget);

@@ -944,7 +944,6 @@ Future<int> _history(ArgResults command, {required bool quiet}) async {
   }
 }
 
-
 Future<int> _baseline(ArgResults command, {required bool quiet}) async {
   final sub = command.command;
   if (sub == null) {

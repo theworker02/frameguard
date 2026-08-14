@@ -60,7 +60,9 @@ class ScenarioExplanation {
     } else if (janky.isEmpty && (report.passed)) {
       primary = 'Within observed smoothness targets';
       evidence.add('No janky frames in ${stats.totalFrames} samples');
-    } else if (buildHeavy >= rasterHeavy && buildHeavy >= 3 && janky.isNotEmpty) {
+    } else if (buildHeavy >= rasterHeavy &&
+        buildHeavy >= 3 &&
+        janky.isNotEmpty) {
       primary = 'Excessive build work';
       diagnostics.add(FrameDiagnostic.buildFrameOverBudget);
       evidence.add(
@@ -74,7 +76,9 @@ class ScenarioExplanation {
         ),
       );
       recommendations.add(Recommendation.buildBound());
-    } else if (rasterHeavy > buildHeavy && rasterHeavy >= 3 && janky.isNotEmpty) {
+    } else if (rasterHeavy > buildHeavy &&
+        rasterHeavy >= 3 &&
+        janky.isNotEmpty) {
       primary = 'Raster/GPU-side work';
       diagnostics.add(FrameDiagnostic.rasterFrameOverBudget);
       evidence.add(
