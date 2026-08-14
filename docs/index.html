@@ -28,7 +28,8 @@
         <li><a href="cli.html">CLI</a></li>
         <li><a href="diagnostics.html">Diagnostics</a></li>
         <li><a href="brand.html">Brand</a></li>
-        <li><a href="https://pub.dev/packages/frameguard">pub.dev</a></li>
+        <li><a class="nav-cta" href="https://pub.dev/packages/frameguard">pub.dev</a></li>
+        <li><a href="https://github.com/theworker02/frameguard/releases/latest">Release</a></li>
         <li><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></li>
       </ul>
     </div>
@@ -36,23 +37,51 @@
 
   <main>
     <section class="wrap hero">
-      <img src="assets/logo.svg" alt="FrameGuard mark" width="88" height="88" />
+      <img class="hero-mark" src="assets/logo.svg" alt="FrameGuard mark" width="96" height="96" />
       <h1>FrameGuard</h1>
       <p class="tagline">Performance regressions, testable.</p>
       <div class="accent-rule" aria-hidden="true"></div>
+      <p class="version-pill">
+        Latest
+        <span class="ver">0.6.0</span>
+        on pub.dev
+      </p>
       <p class="lede">
         Capture Flutter frame timings, classify jank, enforce budgets, compare baselines,
         and fail CI on measurable UI regressions — locally, with no backend.
       </p>
       <div class="cta-row">
-        <a class="btn" href="guide.html">Get started</a>
-        <a class="btn secondary" href="https://github.com/theworker02/frameguard">GitHub</a>
-        <a class="btn signal" href="https://thanks.dev/u/gh/theworker02">thanks.dev</a>
+        <a class="btn primary" href="https://pub.dev/packages/frameguard">Get it on pub.dev</a>
+        <a class="btn" href="https://github.com/theworker02/frameguard/releases/tag/v0.6.0">GitHub Release</a>
+        <a class="btn secondary" href="guide.html">Guide</a>
+      </div>
+      <div class="cta-secondary">
+        <a class="btn ghost" href="https://github.com/theworker02/frameguard">GitHub</a>
+        <a class="btn ghost" href="cli.html">CLI</a>
+        <a class="btn ghost" href="https://thanks.dev/u/gh/theworker02">Sponsor · thanks.dev</a>
+        <a class="btn ghost" href="https://github.com/sponsors/theworker02">GitHub Sponsors</a>
       </div>
       <div class="badge-row" aria-label="Badges">
         <a href="https://pub.dev/packages/frameguard"><img alt="pub package" src="https://img.shields.io/pub/v/frameguard.svg?label=pub&color=2F6F4E" /></a>
+        <a href="https://github.com/theworker02/frameguard/releases/tag/v0.6.0"><img alt="release" src="https://img.shields.io/badge/release-v0.6.0-1A3A3A" /></a>
         <a href="https://github.com/theworker02/frameguard/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-2F6F4E" /></a>
         <a href="https://thanks.dev/u/gh/theworker02"><img alt="thanks.dev" src="https://img.shields.io/badge/thanks.dev-theworker02-1A3A3A" /></a>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>Install from pub.dev</h2>
+      <p class="sub">Add FrameGuard to your Flutter project, then capture a session or assert in tests.</p>
+      <div class="install-panel">
+        <p class="label">pubspec.yaml</p>
+        <pre><code>dependencies:
+  frameguard: ^0.6.0</code></pre>
+        <p class="hint">
+          Package page:
+          <a href="https://pub.dev/packages/frameguard">pub.dev/packages/frameguard</a>
+          · Notes:
+          <a href="https://github.com/theworker02/frameguard/releases/tag/v0.6.0">v0.6.0 release</a>
+        </p>
       </div>
     </section>
 
@@ -61,7 +90,7 @@
       <p class="sub">DevTools answers what happened. FrameGuard answers whether this build should fail.</p>
       <div class="feature-grid">
         <article class="feature">
-          <h3>Budgets & baselines</h3>
+          <h3>Budgets &amp; baselines</h3>
           <p>Refresh-rate-aware gates and deliberate golden updates — never silent overwrites.</p>
         </article>
         <article class="feature">
@@ -80,10 +109,21 @@
     </section>
 
     <section class="wrap section">
-      <h2>Install</h2>
-      <p class="sub">Add the package, then capture a session or assert in tests.</p>
-      <pre><code>dependencies:
-  frameguard: ^0.6.0</code></pre>
+      <h2>What’s new in 0.6.0</h2>
+      <p class="sub">Local history, budget suggestions, and a reusable GitHub Action for CI gates.</p>
+      <div class="whats-new">
+        <ul>
+          <li>Local history store with CLI <code>history</code> and gradual drift checks</li>
+          <li><code>suggest-budget</code> drafts budgets from measured reports</li>
+          <li>Reusable composite action <code>.github/actions/frameguard-check</code></li>
+          <li>Healthier report labeling and inclusive jank-rate thresholds</li>
+        </ul>
+        <p>
+          <a href="https://github.com/theworker02/frameguard/releases/tag/v0.6.0">Full release notes</a>
+          ·
+          <a href="https://github.com/theworker02/frameguard/blob/main/CHANGELOG.md">Changelog</a>
+        </p>
+      </div>
     </section>
 
     <section class="wrap section">
@@ -102,10 +142,12 @@ await report.writeMarkdown(File('reports/home_scroll.md'));</code></pre>
   <footer class="site-footer">
     <div class="wrap row">
       <span>FrameGuard · MIT · maintained by <a href="https://github.com/theworker02">theworker02</a></span>
-      <span>
-        <a href="https://thanks.dev/u/gh/theworker02">Sponsor on thanks.dev</a>
-        ·
-        <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a>
+      <span class="links">
+        <a href="https://pub.dev/packages/frameguard">pub.dev</a>
+        <a href="https://github.com/theworker02/frameguard/releases/latest">Releases</a>
+        <a href="https://github.com/theworker02/frameguard">GitHub</a>
+        <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a>
+        <a href="https://github.com/sponsors/theworker02">Sponsors</a>
       </span>
     </div>
   </footer>
