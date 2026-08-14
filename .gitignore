@@ -34,3 +34,7 @@ Thumbs.db
 # Env
 .env
 .env.*
+
+# Node (local brand raster helpers)
+node_modules/
+package-lock.json

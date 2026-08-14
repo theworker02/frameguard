@@ -59,7 +59,7 @@ Assets in `/branding` (SVGs are source of truth; PNGs are raster exports for pub
 | `tokens.css` | Shared CSS variables |
 | `report-preview.png` | Feature screenshot |
 
-**Mark concept:** a rounded frame with timing ticks (one signal-colored) and a green “guard” bar — frame timings under protection.
+**Mark concept:** a dual-bezel viewport frame with corner brackets, a top timing ruler (one signal-colored jank tick), an interior histogram of consecutive frame durations crossed by a dashed green budget/guard line, and a small shield-check badge — frame timings under protection.
 
 **Clear space:** ≥ 1/8 of the mark’s width on all sides.  
 **Minimum size:** 24×24 px digital.  

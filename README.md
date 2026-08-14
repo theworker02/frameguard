@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/logo.svg" alt="FrameGuard logo" width="128" height="128" />
+  <img src="branding/logo.svg" alt="FrameGuard logo" width="140" height="140" />
 </p>
 
 <h1 align="center">FrameGuard</h1>
