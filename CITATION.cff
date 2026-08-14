@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "FrameGuard"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Looney"
+    given-names: "Matthew"
+    alias: "theworker02"
+repository-code: "https://github.com/theworker02/frameguard"
+url: "https://theworker02.github.io/frameguard/"
+abstract: >-
+  FrameGuard is a Flutter package for automated UI performance regression
+  detection: budgets, baselines, explainability, and CI-native exporters.
+  Local by default. No telemetry.
+keywords:
+  - flutter
+  - performance
+  - jank
+  - regression-testing
+  - ci
+license: MIT
+version: 0.6.0
+date-released: "2026-08-13"

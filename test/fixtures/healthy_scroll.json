@@ -1,0 +1,1262 @@
+{
+  "schemaVersion": 1,
+  "id": "sess-fixture-healthy",
+  "scenario": "healthy_scroll",
+  "startedAt": "2026-08-12T18:00:00.000Z",
+  "endedAt": "2026-08-12T18:00:02.000Z",
+  "frameguardVersion": "0.6.0",
+  "device": {
+    "platform": "android",
+    "deviceModel": "fixture",
+    "flutterVersion": "3.24.0",
+    "dartVersion": "3.5.0",
+    "buildMode": "profile",
+    "refreshRateHz": 60.0,
+    "refreshRateFallback": false
+  },
+  "frameBudgetTargetMs": 16.0,
+  "refreshRateHz": 60.0,
+  "refreshRateFallback": false,
+  "warmupFrameCount": 0,
+  "stats": {
+    "totalFrames": 100,
+    "jankyFrames": 2,
+    "jankRate": 0.02,
+    "averageMs": 7.95,
+    "medianMs": 8.0,
+    "p50Ms": 8.0,
+    "p90Ms": 9.0,
+    "p95Ms": 9.0,
+    "p99Ms": 30.0,
+    "maxMs": 30.0,
+    "averageBuildMs": 5.05,
+    "averageRasterMs": 2.9,
+    "buildBoundFrames": 98,
+    "rasterBoundFrames": 2,
+    "mixedFrames": 0,
+    "insufficientEvidenceFrames": 0,
+    "longestJankStreak": 1,
+    "jankDistribution": {
+      "healthy": 98,
+      "minor": 2,
+      "major": 0,
+      "severe": 0
+    },
+    "histogram": {
+      "buckets": [
+        "0–4 ms",
+        "4–8 ms",
+        "8–12 ms",
+        "12–16 ms",
+        "16–24 ms",
+        "24–32 ms",
+        "32–50 ms",
+        "50+ ms"
+      ],
+      "counts": [
+        0,
+        49,
+        49,
+        0,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    "stdDevMs": 3.287
+  },
+  "frames": [
+    {
+      "frameNumber": 0,
+      "buildMs": 8.0,
+      "rasterMs": 22.0,
+      "totalMs": 30.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.000Z",
+      "severity": "minor",
+      "janky": true,
+      "bottleneck": "rasterBound"
+    },
+    {
+      "frameNumber": 1,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.016Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 2,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.032Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 3,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.048Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 4,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.064Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 5,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.080Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 6,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.096Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 7,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.112Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 8,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.128Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 9,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.144Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 10,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.160Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 11,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.176Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 12,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.192Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 13,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.208Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 14,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.224Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 15,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.240Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 16,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.256Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 17,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.272Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 18,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.288Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 19,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.304Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 20,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.320Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 21,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.336Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 22,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.352Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 23,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.368Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 24,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.384Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 25,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.400Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 26,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.416Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 27,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.432Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 28,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.448Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 29,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.464Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 30,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.480Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 31,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.496Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 32,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.512Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 33,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.528Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 34,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.544Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 35,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.560Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 36,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.576Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 37,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.592Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 38,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.608Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 39,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.624Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 40,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.640Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 41,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.656Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 42,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.672Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 43,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.688Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 44,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.704Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 45,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.720Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 46,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.736Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 47,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.752Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 48,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.768Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 49,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.784Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 50,
+      "buildMs": 8.0,
+      "rasterMs": 22.0,
+      "totalMs": 30.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.800Z",
+      "severity": "minor",
+      "janky": true,
+      "bottleneck": "rasterBound"
+    },
+    {
+      "frameNumber": 51,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.816Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 52,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.832Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 53,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.848Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 54,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.864Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 55,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.880Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 56,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.896Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 57,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.912Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 58,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.928Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 59,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.944Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 60,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.960Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 61,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.976Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 62,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:00.992Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 63,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.008Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 64,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.024Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 65,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.040Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 66,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.056Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 67,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.072Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 68,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.088Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 69,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.104Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 70,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.120Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 71,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.136Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 72,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.152Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 73,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.168Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 74,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.184Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 75,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.200Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 76,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.216Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 77,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.232Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 78,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.248Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 79,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.264Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 80,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.280Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 81,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.296Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 82,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.312Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 83,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.328Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 84,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.344Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 85,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.360Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 86,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.376Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 87,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.392Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 88,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.408Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 89,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.424Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 90,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.440Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 91,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.456Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 92,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.472Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 93,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.488Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 94,
+      "buildMs": 5.0,
+      "rasterMs": 2.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.504Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 95,
+      "buildMs": 6.0,
+      "rasterMs": 3.0,
+      "totalMs": 9.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.520Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 96,
+      "buildMs": 4.0,
+      "rasterMs": 2.0,
+      "totalMs": 6.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.536Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 97,
+      "buildMs": 5.0,
+      "rasterMs": 3.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.552Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 98,
+      "buildMs": 6.0,
+      "rasterMs": 2.0,
+      "totalMs": 8.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.568Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    },
+    {
+      "frameNumber": 99,
+      "buildMs": 4.0,
+      "rasterMs": 3.0,
+      "totalMs": 7.0,
+      "vsyncOverheadMs": 0.0,
+      "timestamp": "2026-08-12T18:00:01.584Z",
+      "severity": "healthy",
+      "janky": false,
+      "bottleneck": "buildBound"
+    }
+  ],
+  "markers": [],
+  "traces": [],
+  "tasks": [],
+  "regions": [
+    {
+      "name": "product_grid",
+      "rebuilds": 20,
+      "framesObserved": 100,
+      "averageRebuildsPerFrame": 0.2,
+      "peakRebuildsInFrame": 2
+    }
+  ],
+  "customMetrics": {
+    "fixture": 1
+  },
+  "imageWarnings": [],
+  "budget": {
+    "maxJankFrames": 10,
+    "maxJankRate": 0.05,
+    "maxP95FrameMs": 16.667,
+    "maxP99FrameMs": 41.668
+  },
+  "budgetEvaluation": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "jank_frames",
+        "passed": true,
+        "actual": "2",
+        "limit": "<= 10",
+        "message": "PASS jank frames: 2 <= 10"
+      },
+      {
+        "name": "jank_rate",
+        "passed": true,
+        "actual": "2.00%",
+        "limit": "<= 5.00%",
+        "message": "PASS jank rate: 2.00% <= 5.00%"
+      },
+      {
+        "name": "p95",
+        "passed": true,
+        "actual": "9.0 ms",
+        "limit": "<= 16.7 ms",
+        "message": "PASS p95: 9.0 ms <= 16.7 ms"
+      },
+      {
+        "name": "p99",
+        "passed": true,
+        "actual": "30.0 ms",
+        "limit": "<= 41.7 ms",
+        "message": "PASS p99: 30.0 ms <= 41.7 ms"
+      }
+    ]
+  },
+  "explanation": {
+    "primaryFinding": "Mixed or unclassified frame spikes",
+    "evidence": [
+      "2 janky frames (2.0%)",
+      "product_grid rebuilt 20 times (peak 2/frame)"
+    ],
+    "contributors": [
+      {
+        "title": "product_grid rebuild burst",
+        "confidence": "medium",
+        "category": "rebuilds"
+      }
+    ],
+    "recommendations": [
+      {
+        "diagnostic": "FG001",
+        "suggestions": [
+          "isolate rapidly changing state away from region \"product_grid\"",
+          "reduce rebuild scope (selectors, listenables, InheritedWidget)",
+          "use const widgets where appropriate",
+          "inspect listeners that invalidate this region"
+        ]
+      }
+    ],
+    "diagnostics": [
+      "FG001"
+    ]
+  },
+  "score": {
+    "total": 87,
+    "maxTotal": 100,
+    "frameSmoothness": 32,
+    "tailLatency": 25,
+    "consistency": 20,
+    "rebuildEfficiency": 10
+  }
+}

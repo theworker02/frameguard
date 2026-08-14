@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guide — FrameGuard</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32" /> FrameGuard</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html" aria-current="page">Guide</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="diagnostics.html">Diagnostics</a></li>
+        <li><a href="brand.html">Brand</a></li>
+        <li><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="wrap prose">
+    <h1>Guide</h1>
+    <p>Prefer <strong>profile</strong> mode for any gate you care about.</p>
+
+    <h2>Initialize</h2>
+    <pre><code>FrameGuard.initialize(
+  config: FrameGuardConfig(
+    samplingMode: SamplingMode.balanced,
+    defaultBudget: BudgetProfile.midRange60().budget,
+  ),
+);
+runApp(const FrameGuardScope(child: MyApp()));</code></pre>
+
+    <h2>Capture a session</h2>
+    <pre><code>final report = await FrameGuard.runSession(
+  name: 'catalog_scroll',
+  body: () async { await scrollCatalog(); },
+);
+await report.writeJson(File('reports/catalog.json'));
+await report.writeHtml(File('reports/catalog.html'));
+await report.writeMarkdown(File('reports/catalog.md'));</code></pre>
+
+    <h2>Assert in tests</h2>
+    <pre><code>import 'package:frameguard/frameguard_test.dart';
+
+final report = await FrameGuardTest.measure(
+  tester,
+  name: 'catalog',
+  action: () async {
+    await tester.fling(find.byType(ListView), const Offset(0, -800), 1000);
+    await tester.pumpAndSettle();
+  },
+);
+expect(report, meetsFrameBudget(BudgetProfile.midRange60().budget));</code></pre>
+
+    <h2>Scaffold a project</h2>
+    <pre><code>dart run frameguard init</code></pre>
+    <p>Creates <code>frameguard.yaml</code>, <code>reports/</code>, and <code>baselines/</code> when missing.</p>
+
+    <h2>Baselines</h2>
+    <pre><code>dart run frameguard baseline update reports/catalog.json --out baselines/catalog.json
+dart run frameguard check reports/catalog.json --baseline baselines/catalog.json</code></pre>
+
+    <p>Package docs also live in the repo under <code>doc/</code> (API cookbook, CI, scenarios).</p>
+  </main>
+  <footer class="site-footer"><div class="wrap row"><span>FrameGuard guide</span><a href="https://thanks.dev/u/gh/theworker02">thanks.dev/u/gh/theworker02</a></div></footer>
+</body>
+</html>

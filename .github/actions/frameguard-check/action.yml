@@ -1,0 +1,52 @@
+name: FrameGuard Check
+description: >
+  Gate Flutter performance reports with FrameGuard (budget + optional baseline).
+  Expects report JSON already produced by your tests or app.
+
+inputs:
+  report:
+    description: Path to a FrameGuard report JSON file or directory
+    required: true
+  baseline:
+    description: Optional baseline JSON path or baselines/ directory
+    required: false
+    default: ''
+  profile:
+    description: Optional built-in budget profile (e.g. mid_range, animation60)
+    required: false
+    default: ''
+  require-profile:
+    description: Fail when --profile is unset (forces explicit budgets in CI)
+    required: false
+    default: 'false'
+  record-history:
+    description: Append compact metrics to history/ JSONL
+    required: false
+    default: 'false'
+  working-directory:
+    description: Working directory for the check
+    required: false
+    default: '.'
+
+runs:
+  using: composite
+  steps:
+    - name: FrameGuard check
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      run: |
+        set -euo pipefail
+        ARGS=("check" "${{ inputs.report }}")
+        if [ -n "${{ inputs.baseline }}" ]; then
+          ARGS+=("--baseline" "${{ inputs.baseline }}")
+        fi
+        if [ -n "${{ inputs.profile }}" ]; then
+          ARGS+=("--profile" "${{ inputs.profile }}")
+        fi
+        if [ "${{ inputs.require-profile }}" = "true" ]; then
+          ARGS+=("--require-profile")
+        fi
+        if [ "${{ inputs.record-history }}" = "true" ]; then
+          ARGS+=("--record-history")
+        fi
+        dart run frameguard "${ARGS[@]}"

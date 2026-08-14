@@ -1,0 +1,19 @@
+# Optional project config (Dart config remains primary).
+# Place as frameguard.yaml at the package/app root if desired.
+# FrameGuard does not require YAML for normal library use.
+
+frameguard:
+  # Use auto, or an explicit Hz value: 60 / 90 / 120 / 144
+  refresh_rate: auto
+  sampling_mode: balanced
+  budgets:
+    max_jank_rate: 0.01
+    max_p95_ms: 16
+    max_p99_ms: 24
+  profiles:
+    mid_range:
+      max_jank_rate: 0.02
+      max_p95_ms: 18
+    strict:
+      max_jank_rate: 0.005
+      max_p95_ms: 8.5

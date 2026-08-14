@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CLI — FrameGuard</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32" /> FrameGuard</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="cli.html" aria-current="page">CLI</a></li>
+        <li><a href="diagnostics.html">Diagnostics</a></li>
+        <li><a href="brand.html">Brand</a></li>
+        <li><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="wrap prose">
+    <h1>CLI</h1>
+    <p>Exit codes: <code>0</code> pass · <code>1</code> regression · <code>2</code> invalid.</p>
+    <p>Get started: <code>dart run frameguard help</code></p>
+
+    <h2>Setup</h2>
+    <pre><code>dart run frameguard init
+dart run frameguard doctor
+dart run frameguard profiles
+dart run frameguard config validate</code></pre>
+
+    <h2>Inspect &amp; explain</h2>
+    <pre><code>dart run frameguard list
+dart run frameguard inspect report.json --format json
+dart run frameguard explain report.json
+dart run frameguard frames report.json --limit 20 --janky-only
+dart run frameguard regions report.json
+dart run frameguard tasks report.json
+dart run frameguard stats report.json
+dart run frameguard top report.json
+dart run frameguard histogram report.json
+dart run frameguard validate reports/</code></pre>
+
+    <h2>Gates &amp; history</h2>
+    <pre><code>dart run frameguard check reports/ --baseline baselines/ --profile mid_range --require-profile
+dart run frameguard check reports/ --record-history
+dart run frameguard suggest-budget reports/x.json --format dart
+dart run frameguard history append reports/x.json
+dart run frameguard history show x --limit 20
+dart run frameguard history drift x
+dart run frameguard compare baseline.json current.json
+dart run frameguard diff a.json b.json --format markdown
+dart run frameguard merge run1.json run2.json run3.json --stats
+dart run frameguard drift baselines/
+dart run frameguard baseline update reports/x.json --out baselines/x.json
+dart run frameguard baseline list
+dart run frameguard watch reports/ --baseline baselines/catalog.json</code></pre>
+
+    <h2>Export &amp; CI</h2>
+    <pre><code>dart run frameguard summary report.json --format markdown >> "$GITHUB_STEP_SUMMARY"
+dart run frameguard export report.json --format junit --out perf.xml
+dart run frameguard artifacts report.json --dir reports
+dart run frameguard batch reports/ --format junit --out-dir reports/exports --check
+dart run frameguard completions --shell bash >> ~/.bashrc</code></pre>
+  </main>
+  <footer class="site-footer"><div class="wrap row"><span>FrameGuard CLI</span><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></div></footer>
+</body>
+</html>

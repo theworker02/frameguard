@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://theworker02.github.io/frameguard/
+    about: Product docs site and getting started guide
+  - name: Security report
+    url: https://github.com/theworker02/frameguard/blob/main/SECURITY.md
+    about: How to report a vulnerability privately
+  - name: Sponsor
+    url: https://thanks.dev/u/gh/theworker02
+    about: Support FrameGuard via thanks.dev

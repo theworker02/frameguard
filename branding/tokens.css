@@ -1,0 +1,15 @@
+/* FrameGuard design tokens — source of truth for site + HTML reports */
+:root {
+  --fg-ink: #1a3a3a;
+  --fg-slate: #2f4f4f;
+  --fg-stone: #5c6b6b;
+  --fg-paper: #f4f6f5;
+  --fg-signal: #c45c26;
+  --fg-pass: #2f6f4e;
+  --fg-line: #d5ddd9;
+  --fg-white: #ffffff;
+  --fg-font-display: "Sora", "Outfit", "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --fg-font-mono: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  --fg-radius: 2px;
+  --fg-max: 960px;
+}

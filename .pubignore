@@ -1,0 +1,23 @@
+# Files excluded from pub.dev uploads (in addition to pub defaults).
+.github/
+.git/
+.dart_tool/
+build/
+coverage/
+tmp_check/
+**/tmp_*
+**/*.iml
+.idea/
+.vscode/
+example/.dart_tool/
+example/build/
+integration_test/
+benchmark/
+tool/
+docs/
+*.log
+.env
+.env.*
+reports/
+baselines/
+_brand_src/

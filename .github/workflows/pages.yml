@@ -1,0 +1,45 @@
+# Deploy the FrameGuard docs site to GitHub Pages.
+name: Pages
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "docs/**"
+      - "branding/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync brand assets into docs/
+        run: |
+          mkdir -p docs/assets
+          cp branding/logo.svg docs/assets/logo.svg
+          cp branding/banner.svg docs/assets/banner.svg
+          cp branding/favicon.svg docs/assets/favicon.svg
+          cp branding/tokens.css docs/assets/tokens.css
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

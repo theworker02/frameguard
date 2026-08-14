@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="FrameGuard  Performance regressions, testable.">
+  <title>FrameGuard banner</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F6F5"/>
+      <stop offset="100%" stop-color="#E4EBE8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <!-- subtle frame grid -->
+  <g stroke="#1A3A3A" stroke-opacity="0.06" fill="none">
+    <rect x="40" y="40" width="1120" height="240" rx="16"/>
+    <line x1="40" y1="120" x2="1160" y2="120"/>
+    <line x1="40" y1="200" x2="1160" y2="200"/>
+  </g>
+  <!-- mark -->
+  <g transform="translate(72,88)">
+    <rect x="0" y="0" width="144" height="144" rx="14" fill="none" stroke="#1A3A3A" stroke-width="10"/>
+    <line x1="32" y1="0" x2="32" y2="20" stroke="#1A3A3A" stroke-width="7" stroke-linecap="round"/>
+    <line x1="72" y1="0" x2="72" y2="26" stroke="#C45C26" stroke-width="7" stroke-linecap="round"/>
+    <line x1="112" y1="0" x2="112" y2="20" stroke="#1A3A3A" stroke-width="7" stroke-linecap="round"/>
+    <rect x="28" y="56" width="88" height="18" rx="4" fill="#2F6F4E"/>
+    <rect x="28" y="86" width="58" height="12" rx="3" fill="#2F4F4F" opacity="0.85"/>
+  </g>
+  <!-- wordmark -->
+  <text x="260" y="155" font-family="Sora, Outfit, DM Sans, Segoe UI, sans-serif" font-size="64" font-weight="700" fill="#1A3A3A">FrameGuard</text>
+  <text x="260" y="210" font-family="Sora, Outfit, DM Sans, Segoe UI, sans-serif" font-size="28" font-weight="500" fill="#5C6B6B">Performance regressions, testable.</text>
+  <!-- signal accent rule -->
+  <rect x="260" y="230" width="72" height="4" rx="2" fill="#C45C26"/>
+</svg>

@@ -1,0 +1,51 @@
+name: frameguard
+description: >
+  FrameGuard — performance regressions, testable. Capture Flutter frame timings,
+  classify jank, enforce budgets, compare baselines, and fail CI on measurable
+  UI regressions. Local by default. No telemetry.
+version: 0.6.0
+homepage: https://theworker02.github.io/frameguard/
+repository: https://github.com/theworker02/frameguard
+issue_tracker: https://github.com/theworker02/frameguard/issues
+documentation: https://theworker02.github.io/frameguard/
+
+topics:
+  - flutter
+  - performance
+  - jank
+  - testing
+  - ci
+
+screenshots:
+  - description: "FrameGuard mark — frame outline with timing ticks"
+    path: screenshots/logo.png
+  - description: "FrameGuard banner — performance regressions, testable"
+    path: screenshots/banner.png
+  - description: "Example FrameGuard terminal report with budget failure"
+    path: screenshots/report.png
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  meta: ^1.15.0
+  path: ^1.9.0
+  args: ^2.5.0
+  collection: ^1.18.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  integration_test:
+    sdk: flutter
+  test: ^1.25.0
+
+flutter:
+  uses-material-design: false
+
+executables:
+  frameguard: frameguard

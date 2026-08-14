@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FrameGuard — Performance regressions, testable.</title>
+  <meta name="description" content="Automated Flutter UI performance regression detection. Budgets, baselines, and evidence-backed reports for CI. Local by default. No telemetry." />
+  <meta property="og:title" content="FrameGuard" />
+  <meta property="og:description" content="Performance regressions, testable." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theworker02.github.io/frameguard/" />
+  <meta property="og:image" content="https://theworker02.github.io/frameguard/assets/banner.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://theworker02.github.io/frameguard/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="" width="32" height="32" />
+        FrameGuard
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="diagnostics.html">Diagnostics</a></li>
+        <li><a href="brand.html">Brand</a></li>
+        <li><a href="https://pub.dev/packages/frameguard">pub.dev</a></li>
+        <li><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <img src="assets/logo.svg" alt="FrameGuard mark" width="88" height="88" />
+      <h1>FrameGuard</h1>
+      <p class="tagline">Performance regressions, testable.</p>
+      <div class="accent-rule" aria-hidden="true"></div>
+      <p class="lede">
+        Capture Flutter frame timings, classify jank, enforce budgets, compare baselines,
+        and fail CI on measurable UI regressions — locally, with no backend.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="guide.html">Get started</a>
+        <a class="btn secondary" href="https://github.com/theworker02/frameguard">GitHub</a>
+        <a class="btn signal" href="https://thanks.dev/u/gh/theworker02">thanks.dev</a>
+      </div>
+      <div class="badge-row" aria-label="Badges">
+        <a href="https://pub.dev/packages/frameguard"><img alt="pub package" src="https://img.shields.io/pub/v/frameguard.svg?label=pub&color=2F6F4E" /></a>
+        <a href="https://github.com/theworker02/frameguard/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-2F6F4E" /></a>
+        <a href="https://thanks.dev/u/gh/theworker02"><img alt="thanks.dev" src="https://img.shields.io/badge/thanks.dev-theworker02-1A3A3A" /></a>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>Why FrameGuard?</h2>
+      <p class="sub">DevTools answers what happened. FrameGuard answers whether this build should fail.</p>
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>Budgets & baselines</h3>
+          <p>Refresh-rate-aware gates and deliberate golden updates — never silent overwrites.</p>
+        </article>
+        <article class="feature">
+          <h3>Evidence-backed findings</h3>
+          <p>FG001–FG010 diagnostics with measured facts separated from heuristics.</p>
+        </article>
+        <article class="feature">
+          <h3>CI-native exports</h3>
+          <p>JSON, HTML, Markdown, JUnit, SARIF, CSV — plus exit codes for pipelines.</p>
+        </article>
+        <article class="feature">
+          <h3>Local by default</h3>
+          <p>No telemetry, no accounts, no required dashboard. Reports stay on disk.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>Install</h2>
+      <p class="sub">Add the package, then capture a session or assert in tests.</p>
+      <pre><code>dependencies:
+  frameguard: ^0.6.0</code></pre>
+    </section>
+
+    <section class="wrap section">
+      <h2>Quick capture</h2>
+      <pre><code>final report = await FrameGuard.runSession(
+  name: 'home_scroll',
+  body: () async {
+    await scrollHome();
+  },
+);
+await report.writeJson(File('reports/home_scroll.json'));
+await report.writeMarkdown(File('reports/home_scroll.md'));</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap row">
+      <span>FrameGuard · MIT · maintained by <a href="https://github.com/theworker02">theworker02</a></span>
+      <span>
+        <a href="https://thanks.dev/u/gh/theworker02">Sponsor on thanks.dev</a>
+        ·
+        <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

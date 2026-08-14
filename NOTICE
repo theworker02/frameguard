@@ -1,0 +1,12 @@
+FrameGuard
+Copyright (c) 2026 FrameGuard contributors
+
+This product includes software developed for local Flutter performance
+regression detection. It does not phone home and ships without telemetry.
+
+Third-party acknowledgements (documentation site only):
+- Fonts used by the GitHub Pages site may be loaded from Google Fonts
+  (Sora, IBM Plex Mono). Those fonts are subject to their respective licenses
+  (SIL Open Font License). Offline/package code does not embed those fonts.
+
+The FrameGuard package itself is licensed under the MIT License — see LICENSE.

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagnostics — FrameGuard</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32" /> FrameGuard</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="diagnostics.html" aria-current="page">Diagnostics</a></li>
+        <li><a href="brand.html">Brand</a></li>
+        <li><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="wrap prose">
+    <h1>Diagnostics</h1>
+    <p>Stable IDs for filtering, suppression, and docs. Full write-ups ship in the package under <code>doc/diagnostics/</code>.</p>
+    <table class="table">
+      <thead><tr><th>ID</th><th>Code</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>FG001</td><td>excessive_rebuilds</td><td>Instrumented region rebuilt too often</td></tr>
+        <tr><td>FG002</td><td>build_frame_over_budget</td><td>Build-side frame cost</td></tr>
+        <tr><td>FG003</td><td>raster_frame_over_budget</td><td>Raster-side frame cost</td></tr>
+        <tr><td>FG004</td><td>oversized_image</td><td>Decoded image larger than display</td></tr>
+        <tr><td>FG005</td><td>long_sync_task</td><td>Long UI-isolate work</td></tr>
+        <tr><td>FG006</td><td>baseline_regression</td><td>Worse than golden baseline</td></tr>
+        <tr><td>FG007</td><td>possible_raster_hitch</td><td>Heuristic hitch pattern</td></tr>
+        <tr><td>FG008</td><td>memory_pressure</td><td>Memory / GC pressure hint</td></tr>
+        <tr><td>FG009</td><td>jank_streak</td><td>Consecutive janky frames</td></tr>
+        <tr><td>FG010</td><td>debug_mode_measurement</td><td>Debug-mode measurement warning</td></tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="site-footer"><div class="wrap row"><span>FrameGuard diagnostics</span><a href="https://thanks.dev/u/gh/theworker02">Sponsor</a></div></footer>
+</body>
+</html>
