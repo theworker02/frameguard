@@ -209,19 +209,34 @@ void main() {
 }
 
 String _resolveDartExecutable() {
-  final localAppData = Platform.environment['LOCALAPPDATA'];
-  if (localAppData != null) {
-    final candidate = p.join(localAppData, 'flutter', 'bin', 'dart.bat');
-    if (File(candidate).existsSync()) return candidate;
-    final candidate2 = p.join(localAppData, 'flutter', 'bin', 'dart.exe');
-    if (File(candidate2).existsSync()) return candidate2;
-  }
   final flutterRoot = Platform.environment['FLUTTER_ROOT'];
   if (flutterRoot != null) {
-    final bat = p.join(flutterRoot, 'bin', 'dart.bat');
-    if (File(bat).existsSync()) return bat;
-    final exe = p.join(flutterRoot, 'bin', 'dart');
-    if (File(exe).existsSync()) return exe;
+    if (Platform.isWindows) {
+      final bat = p.join(flutterRoot, 'bin', 'dart.bat');
+      if (File(bat).existsSync()) return bat;
+      final exe = p.join(flutterRoot, 'bin', 'dart.exe');
+      if (File(exe).existsSync()) return exe;
+    } else {
+      final dart = p.join(flutterRoot, 'bin', 'dart');
+      if (File(dart).existsSync()) return dart;
+    }
   }
+
+  if (Platform.isWindows) {
+    final localAppData = Platform.environment['LOCALAPPDATA'];
+    if (localAppData != null) {
+      final bat = p.join(localAppData, 'flutter', 'bin', 'dart.bat');
+      if (File(bat).existsSync()) return bat;
+      final exe = p.join(localAppData, 'flutter', 'bin', 'dart.exe');
+      if (File(exe).existsSync()) return exe;
+    }
+  }
+
+  // Under `dart test` / some runners this is the dart VM; skip flutter_tester.
+  final resolved = Platform.resolvedExecutable;
+  if (!resolved.contains('flutter_tester')) {
+    return resolved;
+  }
+
   return 'dart';
 }
