@@ -21,3 +21,9 @@ docs/
 reports/
 baselines/
 _brand_src/
+
+# Local brand raster helpers (never ship to pub.dev)
+node_modules/
+package.json
+package-lock.json
+

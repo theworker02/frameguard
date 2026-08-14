@@ -59,7 +59,7 @@ Assets in `/branding` (SVGs are source of truth; PNGs are raster exports for pub
 | `tokens.css` | Shared CSS variables |
 | `report-preview.png` | Feature screenshot |
 
-**Mark concept:** a dual-bezel viewport frame with corner brackets, a top timing ruler (one signal-colored jank tick), an interior histogram of consecutive frame durations crossed by a dashed green budget/guard line, and a small shield-check badge — frame timings under protection.
+**Mark concept:** a filled dual-bezel viewport chassis with corner registration brackets, a top timing ruler (one signal-colored jank tick aligned to the spike), an interior dual-tone frame-duration histogram crossed by a dashed green budget/guard line, and a shield-check badge — frame timings under protection.
 
 **Clear space:** ≥ 1/8 of the mark’s width on all sides.  
 **Minimum size:** 24×24 px digital.  
