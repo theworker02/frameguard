@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="branding/logo.svg" alt="FrameGuard logo" width="140" height="140" />
 </p>
 
@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Performance regressions, testable.</strong><br/>
-  Automated Flutter UI performance regression detection — budgets, baselines, and evidence-backed reports you can enforce in CI.
+  Automated Flutter UI performance regression detection â€” budgets, baselines, and evidence-backed reports you can enforce in CI.
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
   <a href="https://pub.dev/packages/frameguard"><img alt="likes" src="https://img.shields.io/pub/likes/frameguard?label=likes&color=2F4F4F" /></a>
   <a href="https://github.com/theworker02/frameguard/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/theworker02/frameguard/ci.yml?branch=main&label=CI&logo=github" /></a>
   <a href="https://github.com/theworker02/frameguard/actions/workflows/pages.yml"><img alt="Pages" src="https://img.shields.io/github/actions/workflow/status/theworker02/frameguard/pages.yml?branch=main&label=Pages&logo=github" /></a>
-  <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-2F6F4E" /></a>
+  <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-Proprietary%20(source--available)-2F6F4E" /></a>
 </p>
 
 <p align="center">
@@ -30,10 +30,10 @@
 </p>
 
 <p align="center">
-  <a href="https://theworker02.github.io/frameguard/">Docs</a> ·
-  <a href="https://pub.dev/packages/frameguard">pub.dev</a> ·
-  <a href="doc/cli.md">CLI</a> ·
-  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="https://theworker02.github.io/frameguard/">Docs</a> Â·
+  <a href="https://pub.dev/packages/frameguard">pub.dev</a> Â·
+  <a href="doc/cli.md">CLI</a> Â·
+  <a href="CHANGELOG.md">Changelog</a> Â·
   <a href="https://thanks.dev/u/gh/theworker02">Sponsor</a>
 </p>
 
@@ -52,7 +52,7 @@
 | **Package** | [pub.dev/packages/frameguard](https://pub.dev/packages/frameguard) |
 | **Docs site** | [theworker02.github.io/frameguard](https://theworker02.github.io/frameguard/) |
 | **License** | MIT |
-| **Telemetry** | None — local by default |
+| **Telemetry** | None â€” local by default |
 
 ---
 
@@ -71,7 +71,7 @@ Flutter already has excellent profilers. **DevTools** answers:
 | Goal | Interactive exploration | Automation & regression gates |
 | Output | Timelines you interpret | Budgets, baselines, matchers, CI exit codes |
 | Audience | Humans in a profiling session | Humans *and* pipelines |
-| Telemetry | N/A | **None** — local by default |
+| Telemetry | N/A | **None** â€” local by default |
 
 FrameGuard is **not** a thin DevTools wrapper. It turns documented Flutter frame timings into reproducible explanations.
 
@@ -80,15 +80,15 @@ FrameGuard is **not** a thin DevTools wrapper. It turns documented Flutter frame
 ## Features
 
 - **Session capture** via `SchedulerBinding.addTimingsCallback` / `FrameTiming`
-- **Refresh-rate-aware budgets** (60 / 90 / 120 / 144 Hz — no hardcoded 16.67 ms dogma)
+- **Refresh-rate-aware budgets** (60 / 90 / 120 / 144 Hz â€” no hardcoded 16.67 ms dogma)
 - **Jank severity** (healthy / minor / major / severe)
-- **Percentiles** — p50 / p90 / p95 / p99, histograms, streaks
+- **Percentiles** â€” p50 / p90 / p95 / p99, histograms, streaks
 - **Build vs raster** classification (derived, never claimed as certainty)
 - **Regions & rebuild counts** (`FrameGuardRegion`)
 - **Traces, markers, sync tasks**
-- **Explainability + recommendations** tied to evidence (`FG001`–`FG010`)
+- **Explainability + recommendations** tied to evidence (`FG001`â€“`FG010`)
 - **JSON / text / HTML** reports (versioned schema)
-- **CSV · JUnit · SARIF · Markdown** exporters for CI / PR comments
+- **CSV Â· JUnit Â· SARIF Â· Markdown** exporters for CI / PR comments
 - **Baselines & golden files** (never silently overwritten)
 - **Multi-run statistics** (median, MAD, CI; outliers flagged, not deleted)
 - **Test matchers** + `FrameGuardTest.measure`
@@ -96,7 +96,7 @@ FrameGuard is **not** a thin DevTools wrapper. It turns documented Flutter frame
 - **Local history** (JSONL) for gradual drift without a backend
 - **Reusable GitHub Action** (`.github/actions/frameguard-check`)
 - **Optional overlay** & runtime budget watcher
-- **Capability model** — Unavailable beats fake zeros
+- **Capability model** â€” Unavailable beats fake zeros
 
 ---
 
@@ -150,7 +150,7 @@ void main() {
 
 ```dart
 final session = FrameGuard.startSession(name: 'home_scroll');
-// …interact with the app…
+// â€¦interact with the appâ€¦
 final report = await session.stop();
 
 debugPrint(report.summary());
@@ -222,7 +222,7 @@ dart run frameguard baseline update reports/catalog.json --out baselines/catalog
 dart run frameguard check reports/current.json --baseline baselines/catalog.json
 ```
 
-Exit codes: `0` pass · `1` regression · `2` invalid config/report.
+Exit codes: `0` pass Â· `1` regression Â· `2` invalid config/report.
 
 ---
 
@@ -245,7 +245,7 @@ dart run frameguard watch reports/ --once
 dart run frameguard completions --shell bash
 ```
 
-Full command map: [doc/cli.md](doc/cli.md) · [docs/cli.html](https://theworker02.github.io/frameguard/cli.html).
+Full command map: [doc/cli.md](doc/cli.md) Â· [docs/cli.html](https://theworker02.github.io/frameguard/cli.html).
 
 ---
 
@@ -318,7 +318,7 @@ Details: [doc/scenarios.md](doc/scenarios.md).
 | Desktop | Yes | Yes | Yes | |
 | Web | Best-effort | Best-effort | Yes | Absolute ms budgets vary by browser |
 
-Native extras (JankStats, signposts, GPU counters) are **Unavailable** until real adapters ship — we will not invent zeros. See `FrameGuard.capabilities` and platform adapters.
+Native extras (JankStats, signposts, GPU counters) are **Unavailable** until real adapters ship â€” we will not invent zeros. See `FrameGuard.capabilities` and platform adapters.
 
 ---
 
@@ -341,7 +341,7 @@ Native extras (JankStats, signposts, GPU counters) are **Unavailable** until rea
 | [Docs index](doc/README.md) | Package guides |
 | [API cookbook](doc/api.md) | Common workflows |
 | [CI integration](doc/ci.md) | Pipelines & Action |
-| [Diagnostics FG001–FG010](doc/diagnostics/) | What each finding means |
+| [Diagnostics FG001â€“FG010](doc/diagnostics/) | What each finding means |
 | [Contributing](CONTRIBUTING.md) | Dev workflow |
 | [Changelog](CHANGELOG.md) | SemVer history |
 | [Security](SECURITY.md) | Vulnerability reporting |
@@ -360,7 +360,7 @@ flutter test
 flutter test benchmark/overhead_benchmark.dart
 ```
 
-The example app includes intentional jank scenarios (rebuild storm, CPU stall, raster stress, …) so you can validate FrameGuard against known behavior.
+The example app includes intentional jank scenarios (rebuild storm, CPU stall, raster stress, â€¦) so you can validate FrameGuard against known behavior.
 
 ---
 
@@ -368,7 +368,7 @@ The example app includes intentional jank scenarios (rebuild storm, CPU stall, r
 
 Shipped foundations: sessions, budgets, baselines, CI, explainability, exporters, scenario stats, local history, budget suggestions.
 
-Next (when evidence exists — never as fake features):
+Next (when evidence exists â€” never as fake features):
 
 - Deeper GC / memory correlation where public APIs allow  
 - Android JankStats / iOS signpost adapters  
@@ -393,7 +393,8 @@ Bug reports & ideas: [Issues](https://github.com/theworker02/frameguard/issues)
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+**Source-available proprietary** — evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
+
 
 ## Support development
 
@@ -403,5 +404,5 @@ MIT — see [LICENSE](LICENSE).
 ---
 
 <p align="center">
-  <sub>FrameGuard — make performance regressions testable the way functional regressions already are.</sub>
+  <sub>FrameGuard â€” make performance regressions testable the way functional regressions already are.</sub>
 </p>
