@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="branding/logo.svg" alt="FrameGuard logo" width="140" height="140" />
 </p>
 
@@ -406,3 +406,10 @@ Bug reports & ideas: [Issues](https://github.com/theworker02/frameguard/issues)
 <p align="center">
   <sub>FrameGuard â€” make performance regressions testable the way functional regressions already are.</sub>
 </p>
+
+
+---
+
+## License & acquisition
+
+This project is **proprietary**. Production use, redistribution, and commercial deployment require a written commercial license or completed acquisition. See [LICENSE](./LICENSE) and [ACQUISITION.md](./ACQUISITION.md). Contact [@theworker02](https://github.com/theworker02).
